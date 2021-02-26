@@ -104,7 +104,7 @@ export default function Home() {
           </div>
         );
       })}
-      <div tw="fixed flex bottom-0 inset-x-0 justify-evenly font-medium tracking-widest height[100px]">
+      <div tw="fixed z-20 flex bottom-0 inset-x-0 justify-evenly font-medium tracking-widest height[100px]">
         {slides.map((s, i) => (
           <div
             key={i}

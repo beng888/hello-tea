@@ -147,7 +147,7 @@ export default function Tea() {
           <div onClick={() => nextSlide()} />
         </div>
       </div>
-      <div tw="bg-black bg-opacity-90 text-white flex justify-center items-center h-full w-full relative pb-40 pt-20 md:flex-1">
+      <div tw="bg-black bg-opacity-90 text-white flex justify-center items-center h-full w-full min-height[600px] relative pb-40 pt-20 md:flex-1">
         <div tw="background-image[url('/images/products.jpg')] absolute inset-0 -z-10" />
         {slides.map((s, i) => (
           <div

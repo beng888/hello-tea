@@ -84,7 +84,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(
         >
           <form
             onSubmit={handleSubmit(onSubmit)}
-            tw="h-full flex flex-col justify-center gap-8 text-white max-w-sm font-family['Merriweather', serif]"
+            tw="h-full flex flex-col justify-center gap-8 text-white md:max-w-sm font-family['Merriweather', serif]"
           >
             {serverErrors && (
               <ul>

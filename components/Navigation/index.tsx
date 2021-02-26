@@ -56,7 +56,11 @@ const Navigation: React.FC = () => {
           tw="flex items-center text-xs tracking-widest gap-10  w-full duration-500 justify-end cursor-pointer 
               sm:gap-12 "
           className={`group ${
-            router.pathname === "/" ? "bg-black" : "bg-black md:bg-transparent"
+            open
+              ? "bg-transparent"
+              : router.pathname === "/" && !open
+              ? "bg-black"
+              : "bg-black md:bg-transparent"
           }`}
         >
           <div
