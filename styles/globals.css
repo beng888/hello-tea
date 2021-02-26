@@ -1,16 +1,28 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+TC:wght@400;500;600&display=swap");
+body,
+html {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+  outline: none;
+}
+
+input,
+textarea {
+  background: transparent;
+  @apply placeholder-white;
+}
+
+.no-delay {
+  transition-delay: 0s !important;
+}
+
+@layer base {
+  div {
+    @apply bg-center bg-cover;
+  }
 }
