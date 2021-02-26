@@ -32,8 +32,6 @@ const Menu = React.forwardRef<HTMLDivElement, Props>(
           y: 0,
           autoAlpha: 1,
           stagger: 0.2,
-          userSelect: "auto",
-          pointerEvents: "auto",
         });
     }, [open]);
 
