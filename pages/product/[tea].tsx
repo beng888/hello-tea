@@ -100,7 +100,7 @@ export default function Tea() {
   };
 
   return (
-    <div tw="h-full w-full flex flex-col md:flex-row-reverse overflow-y-auto">
+    <div tw="h-full w-full flex flex-col md:flex-row-reverse overflow-y-auto overflow-x-hidden">
       <div tw="mt-52 mb-20 relative w-full cursor-pointer md:(flex-1 overflow-x-hidden min-h-screen my-auto)">
         <div tw="transform translate-x-3/4 m-auto md:absolute inset-0">
           <div
