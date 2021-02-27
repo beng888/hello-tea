@@ -40,14 +40,11 @@ export default function Tea() {
 
   const changeSize = () => {
     setSize(slideContainerRef.current?.offsetWidth);
-    console.log(size);
   };
 
-  useLayoutEffect(() => {
-    changeSize();
-  }, []);
-
   useEffect(() => {
+    changeSize();
+
     window.addEventListener("resize", changeSize);
     return () => {
       window.removeEventListener("resize", changeSize);
@@ -84,8 +81,6 @@ export default function Tea() {
     });
   };
 
-  console.log(counter);
-
   const prevSlide = () => {
     if (counter >= 0) {
       setCounter(counter - 1);
@@ -108,7 +103,10 @@ export default function Tea() {
             tw="flex items-center justify-center md:absolute inset-0"
           >
             {carouselSlides.map((s, i) => (
-              <div key={i} tw="min-width[50%] h-full grid place-content-center">
+              <div
+                key={i}
+                tw="min-width[50%] h-full grid place-content-center select-none"
+              >
                 <div
                   tw="w-3/5 mx-auto ease-out"
                   className={`transform duration-1000 ${
@@ -118,7 +116,7 @@ export default function Tea() {
                   <img
                     src={s?.lid}
                     alt={s?.lid}
-                    className={`transform duration-1000 ease-out ${
+                    className={`transform duration-1000 ease-out select-none ${
                       current === s?.index
                         ? "-translate-y-3/4"
                         : "translate-y-1"
